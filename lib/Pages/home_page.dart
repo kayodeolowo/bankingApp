@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
+import 'package:mywallet/util/buttons.dart';
 import 'package:mywallet/util/card.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -99,6 +100,86 @@ class _HomePageState extends State<HomePage> {
               controller: _controller,
               count: 3,
               effect: ExpandingDotsEffect(activeDotColor: Colors.red),
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Button(
+                    iconImagePath: 'images/sendmoney.png',
+                    buttonText: 'Transfer',
+                  ),
+                  Button(
+                    iconImagePath: 'images/pay.png',
+                    buttonText: 'Pay',
+                  ),
+                  Button(
+                    iconImagePath: 'images/bill.png',
+                    buttonText: 'Bills',
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(25),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: 80,
+                            padding: EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                                color: Colors.grey[100],
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Image.asset('images/stats.png'),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Statistics',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 13,
+                              ),
+                              Text(
+                                'Payments and Income',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.grey[600],
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.arrow_forward_ios_outlined)
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
