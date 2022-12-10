@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -18,13 +18,10 @@ class Button extends StatelessWidget {
           height: 80,
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
-              color: Colors.white,
+              //   color: Colors.white,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
-                BoxShadow(
-                    color: Colors.grey.shade400,
-                    blurRadius: 10,
-                    spreadRadius: 2)
+                BoxShadow(color: Colors.white, blurRadius: 30, spreadRadius: 2)
               ]),
           child: Center(
             child: Image.asset(iconImagePath),

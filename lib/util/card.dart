@@ -28,23 +28,42 @@ class MyCard extends StatelessWidget {
             color: Color, borderRadius: BorderRadius.circular(16)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  height: 0,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Balance',
+                  style: TextStyle(color: Colors.white, fontSize: 17),
+                ),
+                Image.asset(
+                  'images/visa.png',
+                  height: 40,
+                )
+              ],
+            ),
             SizedBox(
               height: 10,
             ),
             Text(
-              'Balance',
-              style: TextStyle(color: Colors.white),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Text(
               '\$' + balance.toString(),
-              style: TextStyle(color: Colors.white, fontSize: 24),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Row(
               //card info
@@ -52,11 +71,11 @@ class MyCard extends StatelessWidget {
               children: [
                 Text(
                   cardNumber.toString(),
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 Text(
                   expiryDate.toString() + '/' + expiryYear.toString(),
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ],
             )
